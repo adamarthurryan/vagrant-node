@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# prepare this folder for running yo by creating and linking a shared node_module folder 
+# in the home folder
+# this is necessary because of restrictions on the max path length in virtualbox shared folders 
+
+SHAREPATH="/home/vagrant/node_modules_share$(pwd)/node_modules"
+
+echo SHAREPATH = $SHAREPATH
+
+mkdir -p $SHAREPATH
+ln -s $SHAREPATH node_modules
