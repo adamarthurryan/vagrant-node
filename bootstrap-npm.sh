@@ -38,6 +38,9 @@ source ${HOME}/.bashrc
 # update npm?
 npm update -g npm
 
+# install node-gyp
+npm install -g node-gyp
+
 # install yeoman tooling
 npm install -g yo bower grunt-cli
 
@@ -48,7 +51,3 @@ npm install -g generator-webapp generator-angular generator-angular-fullstack
 # install express generator? 
 # this may not be necessary with the yo scaffolding
 #npm install express-generator -g
-
-# fix npm permissions (the sudo npm install -g above might have made it janky)
-# then again, maybe this is not an issue
-#sudo chown vagrant: /home/vagrant/.npm

@@ -17,3 +17,26 @@ To launch the cygwin or cmd shell as administrator under Windows, right click on
 Presumably 'sudo vagrant up' would be sufficient on a Linux host OS.
 
 To prepare a folder for use with npm under a Windows host OS, run the script 'npm-prepare' from within that folder. (npm-prepare is installed to /usr/local/bin during provisioning.) npm-prepare will create a node_modules folder in a unique subfolder of ~/node_modules_share and create a symlink from the current folder. Subsequent execution of 'yo' or 'npm install' will write to that folder, circumventing the host filesystem limitation on path lengths. npm-prepare should not be necessary for a Linux host OS.  
+
+
+Other configuration
+-------------------
+
+Note that Grunt needs to be configured to run the server on 0.0.0.0 instead of localhost. This configuration option will be put in Gruntfile.js of each web apps folder. Eg.
+  
+    express: {
+        options: {
+          port: process.env.PORT || 8000,
+          ip: '0.0.0.0',
+        },
+        ...
+
+or 
+
+    connect: {
+      options: {
+        port: 8000,
+        hostname: '0.0.0.0'
+        ...
+
+depending on the type of app.

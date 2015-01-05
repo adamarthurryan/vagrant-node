@@ -10,8 +10,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty32"
 
   # Map 8080 on the host to 80 on the vagrant box
-  # 8000 and 3000 map to the same port numbers
+  # 9000, 8000 and 3000 map to the same port numbers
   config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 9000, host: 9000
   config.vm.network "forwarded_port", guest: 8000, host: 8000
   config.vm.network "forwarded_port", guest: 3000, host: 3000
 

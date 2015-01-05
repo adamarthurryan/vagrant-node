@@ -21,3 +21,7 @@ sudo apt-get install -y nodejs
 # install the npm-prepare script
 sudo cp /vagrant/npm-prepare /usr/local/bin
 sudo chmod a+rx /usr/local/bin/npm-prepare
+
+
+# install the SASS rubygem
+sudo gem install sass
