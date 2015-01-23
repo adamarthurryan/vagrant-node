@@ -13,15 +13,19 @@ sudo apt-get install -y mongodb-org
 # install git
 sudo apt-get install -y git
 
+# install g++
+sudo apt-get install -y g++
+
 # install node.js
 sudo apt-get -y install curl
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install -y nodejs
 
-# install the npm-prepare script
+# install the npm-prepare and mongod-start scripts
 sudo cp /vagrant/npm-prepare /usr/local/bin
 sudo chmod a+rx /usr/local/bin/npm-prepare
-
+sudo cp /vagrant/mongod-start /usr/local/bin
+sudo chmod a+rx /usr/local/bin/mongod-start
 
 # install the SASS rubygem
 sudo gem install sass

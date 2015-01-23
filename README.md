@@ -1,7 +1,7 @@
 learning-nodejs-passport
 ========================
 
-A MEAN (Mongo, Express, Angular and Node) stack user authentication app with Passport.js
+A MEAN (Mongo, Express, Angular and Node) stack development box for Vagrant.
 
 
 
@@ -40,3 +40,9 @@ or
         ...
 
 depending on the type of app.
+
+
+Mongo DB
+--------
+
+One may want to start mongo db with a command like:

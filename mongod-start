@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# start the mongod a background process 
+# with data saved in ~/mongodb and journaling enabled
+mkdir ~/mongod
+mkdir ~/mongod/db
+mongod --dbpath ~/mongod/db --logpath ~/mongod/db.log --fork --journal
